@@ -11,3 +11,25 @@ Jan 18 03:17:31:  executing command {spotify-this-song} on argument {i will alwa
 Jan 18 03:17:58:  executing command {spotify-this-song} on argument {i will always love you}
 Jan 18 03:18:04:  executing command {spotify-this-song} on argument {i will always love you}
 Jan 18 03:18:27:  executing command {spotify-this-song} on argument {}
+Jan 18 03:21:04:  executing command {movie-this} on argument {}
+Jan 18 03:21:10:  executing command {movie-this} on argument {the force}
+Jan 18 03:22:15:  executing command {movie-this} on argument {the force}
+Jan 18 03:24:25:  executing command {movie-this} on argument {the force}
+Jan 18 03:26:03:  executing command {movie-this} on argument {the force}
+Jan 18 03:28:11:  executing command {movie-this} on argument {the force}
+Jan 18 03:34:17:  executing command {movie-this} on argument {the force}
+Jan 18 03:35:08:  executing command {movie-this} on argument {the force}
+Jan 18 03:35:21:  executing command {movie-this} on argument {the force}
+Jan 18 03:38:48:  executing command {movie-this} on argument {the force}
+Jan 18 03:39:01:  executing command {movie-this} on argument {the force}
+Jan 18 03:39:20:  executing command {movie-this} on argument {batman}
+Jan 18 03:48:32:  executing command {movie-this} on argument {}
+Jan 18 03:48:47:  executing command {movie-this} on argument {batman}
+Jan 18 03:49:00:  executing command {movie-this} on argument {the force}
+Jan 18 04:05:31:  executing command {movie-this} on argument {the force}
+Jan 18 04:05:40:  executing command {movie-this} on argument {batman}
+Jan 18 04:06:52:  executing command {movie-this} on argument {batman}
+Jan 18 04:06:57:  executing command {movie-this} on argument {the force}
+Jan 18 04:11:07:  executing command {movie-this} on argument {the force}
+Jan 18 04:11:12:  executing command {movie-this} on argument {batman}
+Jan 18 04:11:38:  executing command {movie-this} on argument {batman}

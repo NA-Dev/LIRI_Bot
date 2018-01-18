@@ -78,6 +78,7 @@ function execute(command, argument) {
 }
 
 function myTweets() {
+
 	var params = {
 		screen_name: 'nadevtest',
 		count: 20
@@ -87,6 +88,7 @@ function myTweets() {
 
 	client.get(
 	  'statuses/user_timeline', params, function(error, tweets, response) {
+
 		if (error) {
 			return console.log('Error offurred: ' + error);
 		}
@@ -107,7 +109,9 @@ function myTweets() {
 }
 
 function spotifySong(searchString) {
+
 	console.log('getting song info on {' + searchString + '}');
+
 	var params = {
 		type: 'track',
 		query: searchString,
@@ -135,14 +139,17 @@ function spotifySong(searchString) {
 }
 
 function movieThis(movieName) {
+
 	console.log('getting movie info on {' + movieName + '}');
 
 	requestURL = 'https://www.omdbapi.com/?apikey=' + keys.omdb.key +
 		'&t=' + movieName;
 
 	request(requestURL, function(error, response, body) {
+
 		if (error) {
 			return console.log(error);
+
 		} else if (!body) {
 			return console.log(response.statusCode, response);
 		}
@@ -150,17 +157,20 @@ function movieThis(movieName) {
 		body = JSON.parse(body);
 
 		var rottenTomatoesRating = body.Ratings.find(
-			obj => obj.Source === 'Rotten Tomatoes'
-		).Value;
+			obj => obj.Source === "Rotten Tomatoes"
+		);
 
-		var imdbRating = body.Ratings.find(
-			obj => obj.Source === 'Internet Movie Database'
-		).Value;
+		if (rottenTomatoesRating) {
+			rottenTomatoesRating = rottenTomatoesRating.Value;
+
+		} else {
+			rottenTomatoesRating = "not available";
+		}
 
 		movieInfo = {
 			title: body.Title,
 			year: body.Year,
-			imdbRating: imdbRating,
+			imdbRating: body.imdbRating,
 			rottenTomatoesRating: rottenTomatoesRating,
 			countryOfOrigin: body.Country,
 			language: body.Language,
