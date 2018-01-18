@@ -14,10 +14,7 @@ var spotify = new Spotify(keys.spotify);
 var client = new Twitter(keys.twitter);
 
 var command = process.argv[2];
-var argument = process.argv[3];
-
-console.log(keys.spotify);
-console.log(spotify);
+var argument = process.argv.slice(3).join(" ");
 
 execute(command, argument);
 
@@ -45,7 +42,6 @@ function execute(command, argument) {
 	} else if (command === 'spotify-this-song') {
 
 		if (argument) {
-			argument = argument.replace(/(^")|("$)/g, '');
 			spotifySong(argument);
 
 		} else {
@@ -55,7 +51,6 @@ function execute(command, argument) {
 	} else if (command === 'movie-this') {
 
 		if (argument) {
-			argument = argument.replace(/(^")|("$)/g, '');
 			movieThis(argument);
 
 		} else {
@@ -153,9 +148,8 @@ function movieThis(movieName) {
 		}
 
 		body = JSON.parse(body);
-		console.log(body);
 
-		var rottenRating = body.Ratings.find(
+		var rottenTomatoesRating = body.Ratings.find(
 			obj => obj.Source === 'Rotten Tomatoes'
 		).Value;
 
@@ -167,7 +161,7 @@ function movieThis(movieName) {
 			title: body.Title,
 			year: body.Year,
 			imdbRating: imdbRating,
-			rottenRating: rottenRating,
+			rottenTomatoesRating: rottenTomatoesRating,
 			countryOfOrigin: body.Country,
 			language: body.Language,
 			plot: body.Plot,
